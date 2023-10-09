@@ -24,3 +24,7 @@
 .ShoppingList ul li:hover::before {
     content: '❌';
 }
+.ShoppingList p.mini-text {
+    text-align: start;
+    color: crimson;
+}
