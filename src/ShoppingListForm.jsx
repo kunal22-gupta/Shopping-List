@@ -2,7 +2,7 @@ import "./ShoppingListForm.css";
 import { useState } from "react";
 
 export default function ShoppingListForm({ setItemsList, uid }) {
-    const [item, setItem] = useState({ id: uid.rnd, product: "", qty: "" });
+    const [item, setItem] = useState({ id: uid.rnd(), product: "", qty: "" });
 
     const updateForm = (e) => {
         setItem((currItem) => {
