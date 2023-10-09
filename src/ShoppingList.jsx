@@ -44,7 +44,7 @@ export default function ShoppingList() {
                 })}
             </ul>
             <hr/>
-            <p className="mini-text">{lastRemoveItem}</p>
+            <p className="mini-text removed">{lastRemoveItem}</p>
             <ShoppingListForm setItemsList={setItemsList} uid={uid} />
         </div>
     );
