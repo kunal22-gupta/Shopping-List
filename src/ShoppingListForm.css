@@ -19,13 +19,13 @@
 .ShoppingListForm > .row .col:nth-child(2) input {
     width: 50px;
 }
-.ShoppingList button {
+.ShoppingListForm button {
     background-color: rgb(95, 158, 160);
     color: white;
     border: none;
     transition: all 0.2s;
 }
-.ShoppingList button:hover {
+.ShoppingListForm button:hover {
     border: none;
     background-color: rgb(52, 120, 122);
     color: white;
