@@ -26,5 +26,5 @@
 }
 .ShoppingList p.removed {
     text-align: start;
-    color: crimson;
+    color: rgb(52, 120, 122);
 }

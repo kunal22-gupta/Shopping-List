@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function ShoppingList() {
     const uid = new ShortUniqueId();
-    const [lastRemoveItem, setLastRemoveItem] = useState("Click on items to remove them");
+    const [lastRemoveItem, setLastRemoveItem] = useState("*Click on items to remove them");
     const [itemsList, setItemsList] = useState([
         { id: uid.rnd(), product: "Apples", qty: 5 },
         { id: uid.rnd(), product: "Bananas", qty: 4 },
