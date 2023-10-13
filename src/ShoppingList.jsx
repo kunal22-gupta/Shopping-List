@@ -2,23 +2,30 @@ import "./ShoppingList.css";
 
 import ShortUniqueId from "short-unique-id";
 import ShoppingListForm from "./ShoppingListForm";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const uid = new ShortUniqueId();
+
+const initialList = JSON.parse(localStorage.getItem("itemsList")) || [
+    { id: uid.rnd(), product: "Apples", qty: 5 },
+    { id: uid.rnd(), product: "Bananas", qty: 4 },
+];
 
 export default function ShoppingList() {
-    const uid = new ShortUniqueId();
-    const [lastRemoveItem, setLastRemoveItem] = useState("*Click on items to remove them");
-    const [itemsList, setItemsList] = useState([
-        { id: uid.rnd(), product: "Apples", qty: 5 },
-        { id: uid.rnd(), product: "Bananas", qty: 4 },
-    ]);
+    const [lastRemoveItem, setLastRemoveItem] = useState(
+        "*Click on items to remove them"
+    );
+    const [itemsList, setItemsList] = useState(initialList);
 
-    
-    console.log(itemsList);
+    useEffect(() => {
+        localStorage.setItem("itemsList", JSON.stringify(itemsList));
+    }, [itemsList]);
 
     // Remove an item from the list
     const removeItem = (e) => {
         // Select the li element
-        const li = e.target.localName === "span" ? e.target.parentNode : e.target;
+        const li =
+            e.target.localName === "span" ? e.target.parentNode : e.target;
 
         // Remove item from state
         setItemsList((currItemsList) => {
@@ -43,7 +50,7 @@ export default function ShoppingList() {
                     );
                 })}
             </ul>
-            <hr/>
+            <hr />
             <p className="mini-text removed">{lastRemoveItem}</p>
             <ShoppingListForm setItemsList={setItemsList} uid={uid} />
         </div>
