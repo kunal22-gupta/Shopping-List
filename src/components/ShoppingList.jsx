@@ -1,4 +1,4 @@
-import "./ShoppingList.css";
+import "../../css/ShoppingList.css";
 
 import ShortUniqueId from "short-unique-id";
 import ShoppingListForm from "./ShoppingListForm";

@@ -1,5 +1,5 @@
-import ShoppingList from "./ShoppingList"
-import './App.css'
+import ShoppingList from "./components/ShoppingList"
+import '../css/App.css'
 
 function App() {
   return (
@@ -8,5 +8,4 @@ function App() {
     </>
   )
 }
-
 export default App

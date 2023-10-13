@@ -1,4 +1,4 @@
-import "./ShoppingListForm.css";
+import "../../css/ShoppingListForm.css";
 import { useState } from "react";
 
 export default function ShoppingListForm({ setItemsList, uid }) {
